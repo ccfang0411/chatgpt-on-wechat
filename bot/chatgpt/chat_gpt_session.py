@@ -81,6 +81,9 @@ def num_tokens_from_messages(messages, model):
     elif model == "gpt-4":
         tokens_per_message = 3
         tokens_per_name = 1
+    elif model == "deepseek-chat":
+        tokens_per_message = 3
+        tokens_per_name = -1
     else:
         logger.warn(f"num_tokens_from_messages() is not implemented for model {model}. Returning num tokens assuming gpt-3.5-turbo.")
         return num_tokens_from_messages(messages, model="gpt-3.5-turbo")

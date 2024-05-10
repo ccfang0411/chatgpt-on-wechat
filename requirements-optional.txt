@@ -44,3 +44,8 @@ zhipuai>=2.0.1
 
 # tongyi qwen new sdk
 dashscope
+
+# 大盘指数
+pywencai
+qstock
+

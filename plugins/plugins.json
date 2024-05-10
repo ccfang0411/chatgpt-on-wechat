@@ -8,6 +8,14 @@
             "enabled": true,
             "priority": 900
         },
+        "sum4all": {
+            "enabled": true,
+            "priority": 2
+        },
+        "timetask": {
+            "enabled": true,
+            "priority": 950
+        },
         "Banwords": {
             "enabled": false,
             "priority": 100

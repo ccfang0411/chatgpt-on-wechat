@@ -49,3 +49,16 @@ dashscope
 pywencai
 qstock
 
+#time
+arrow>=1.2.3
+openpyxl>=3.1.2
+croniter>=1.4.1
+
+# sum4all
+python-docx
+markdown
+PyMuPDF
+openpyxl
+beautifulsoup4
+python-pptx
+Pillow

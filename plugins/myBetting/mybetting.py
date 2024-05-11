@@ -13,10 +13,10 @@ import plotly.express as px
 
 
 @plugins.register(
-    name="MyStock",
-    desire_priority=91,
+    name="MyBetting",
+    desire_priority=100,
     hidden=True,
-    desc="获取大盘指数项目",
+    desc="股票竞猜项目",
     version="0.1",
     author="ccfang",
 )

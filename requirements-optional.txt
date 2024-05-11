@@ -62,3 +62,6 @@ openpyxl
 beautifulsoup4
 python-pptx
 Pillow
+
+# mybetting
+exchange_calendars

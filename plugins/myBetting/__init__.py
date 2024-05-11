@@ -1,1 +1,1 @@
-from .mystock import *
+from .mybetting import *

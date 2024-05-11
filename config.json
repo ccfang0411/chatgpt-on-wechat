@@ -5,7 +5,7 @@
   "hot_reload": true,
   "single_chat_prefix": [""],
   "single_chat_reply_prefix": "",
-  "group_chat_prefix": ["@GPT机器人"],
+  "group_chat_prefix": ["@啊嘟嘟"],
   "group_chat_in_one_session":["ALL_GROUP"],
   "group_name_white_list": ["ALL_GROUP"],
   "image_create_prefix": ["画"],

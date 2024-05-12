@@ -54,7 +54,7 @@ class MyBetting(Plugin):
         #    return  
         group_id = msg.other_user_id            # 群组id
         group_name = msg.other_user_nickname    # 群组名称
-        group_name ="2024工作计划群"
+        #group_name ="2024工作计划群"
         from_user_id = msg.actual_user_id       # 发送者id
         from_user_nickname = msg.actual_user_nickname  # 发送者昵称 聊天群名称
         ## todo 在特定群组生效

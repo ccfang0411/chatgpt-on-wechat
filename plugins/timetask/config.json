@@ -16,6 +16,18 @@
       "func_command_prefix":"$tool "
     },
     {
+      "key_word": "大盘指数",
+      "func_command_prefix":"$tool "
+    },
+    {
+      "key_word": "提醒下注",
+      "func_command_prefix":"$tool "
+    },
+    {
+      "key_word": "当日结果",
+      "func_command_prefix":"$tool "
+    },
+    {
       "key_word": "点歌",
       "func_command_prefix": "$"
     },

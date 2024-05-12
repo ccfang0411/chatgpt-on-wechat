@@ -1,28 +1,8 @@
 {
     "plugins": {
-        "Godcmd": {
-            "enabled": true,
-            "priority": 999
-        },
-        "Keyword": {
-            "enabled": true,
-            "priority": 900
-        },
-        "sum4all": {
-            "enabled": true,
-            "priority": 2
-        },
         "timetask": {
             "enabled": true,
             "priority": 950
-        },
-        "Banwords": {
-            "enabled": false,
-            "priority": 100
-        },
-        "linkai": {
-            "enabled": false,
-            "priority": 99
         },
         "MyStock": {
             "enabled": true,
@@ -32,33 +12,21 @@
             "enabled": true,
             "priority": 90
         },
-        "summary":{
-            "enabled": false,
-            "priority": -1
+        "sum4all": {
+            "enabled": true,
+            "priority": 2
+        },
+        "MyBetting": {
+            "enabled": true,
+            "priority": 1
         },
         "tool": {
             "enabled": false,
             "priority": 0
         },
-        "Role": {
-            "enabled": false,
-            "priority": 0
-        },
-        "Dungeon": {
-            "enabled": false,
-            "priority": 0
-        },
-        "BDunit": {
-            "enabled": false,
-            "priority": 0
-        },
-        "Hello": {
-            "enabled": false,
+        "summary": {
+            "enabled": true,
             "priority": -1
-        },
-        "Finish": {
-            "enabled": false,
-            "priority": -999
         }
     }
 }

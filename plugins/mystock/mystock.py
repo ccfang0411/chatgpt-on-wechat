@@ -47,7 +47,8 @@ class MyStock(Plugin):
             reply_type =  ReplyType.TEXT
             reply = self.create_reply(reply_type, stock_index)
             e_context["reply"] = reply
-            e_context.action = EventAction.BREAK_PASS  # 事件结束，并跳过处理context的默认逻辑
+            e_context["context"].content = stock_index + "\n 基于上述数据，请你模仿脱口秀演员House口吻的点评下，要求回复需要有emoji表情，在回复中需要有前三个指数的涨跌幅，字数尽量在40个字以下"
+            e_context.action = EventAction.BREAK  # 事件结束，并跳过处理context的默认逻辑
             return
         
         if  content.startswith("老子的股票今天涨了吗"):
@@ -70,6 +71,7 @@ class MyStock(Plugin):
     def get_stock_index(self):
         
         mystock = ["上证指数", "创业板指","沪深300","中证500","中证1000","恒生指数","恒生科技指数"]
+        mystock = ["上证指数", "创业板指","沪深300"]
         #mystock_df = pd.DataFrame(mystock)
         retext =[]
         stock_rt = qs.realtime_data(code=mystock)

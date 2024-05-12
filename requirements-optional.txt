@@ -65,3 +65,6 @@ Pillow
 
 # mybetting
 exchange_calendars
+pymysql
+pywencai
+qstock

@@ -21,7 +21,7 @@ BASE_URL_ALAPI = "https://v2.alapi.cn/api/"
     version="0.2",
     author="vision",
 )
-class Apilot(Plugin):
+class myApilot(Plugin):
     def __init__(self):
         super().__init__()
         try:

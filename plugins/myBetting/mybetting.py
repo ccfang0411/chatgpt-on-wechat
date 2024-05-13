@@ -172,12 +172,11 @@ class MyBetting(Plugin):
                 result_int = result_int - 1
         for index, row in stock_rt.iterrows():
             retext = retext+ f"{row['名称']}, 涨跌幅: {row['涨幅']}"
-        if result_int:
+        if result_int >0:
             return True,"涨",retext
         else:
             return False,"跌",retext
     def update_stock_result(self,banker,resultstr,group_name):
-        group_name = "2024工作计划群"
         _,_,day = self.get_month_and_week()
         sql = "select winner from stock_guessing where group_name = '{0}' and match_date = '{1}' and guessing_status = 1".format(group_name,day)
         result =self.execute_sql(sql)
@@ -190,7 +189,7 @@ class MyBetting(Plugin):
         result =self.execute_sql(sql)
         if result:
             winner = result[0][0]
-            return "精彩的比赛，恭喜(@{0})获胜".format(banker)
+            return "精彩的比赛，恭喜(@{0})获胜".format(winner)
         
         sql = "select banke_bet from stock_guessing where group_name = '{0}' and match_date = '{1}' and guessing_status = 0".format(group_name,day)
         result =self.execute_sql(sql)
@@ -204,7 +203,7 @@ class MyBetting(Plugin):
                 winner = [i for i in players if i != banker][0]
                 sql = "update stock_guessing set winner = '{2}', guessing_status = 2 where group_name = '{0}' and match_date = '{1}'".format(group_name,day,winner)
                 self.execute_sql(sql)
-                return "精彩的比赛,恭喜(@{0})获胜".format(banker)
+                return "精彩的比赛,恭喜(@{0})获胜".format(winner)
         return "精彩的比赛"
     def  insert_stock_guessing(self,group_name,group_id,banker):
         month_info,week_info,day = self.get_month_and_week()

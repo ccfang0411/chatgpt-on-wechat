@@ -48,14 +48,17 @@ class myApilot(Plugin):
         ]:
             return
         content = e_context["context"].content.strip()
-        logger.debug("[Apilot] on_handle_context. content: %s" % content)
+        logger.info("[Apilot] on_handle_context. content: %s" % content)
 
         if content == "早报" or content.endswith("早报"):
             news = self.get_morning_news(self.alapi_token, self.morning_news_text_enabled)
             reply_type = ReplyType.IMAGE_URL if self.is_valid_url(news) else ReplyType.TEXT
+            news = news+"帮忙改写下要多一些emoji,文字意思和内容都不要变"
             reply = self.create_reply(reply_type, news)
             e_context["reply"] = reply
-            e_context.action = EventAction.BREAK_PASS  # 事件结束，并跳过处理context的默认逻辑
+            e_context["reply"].content =news
+            e_context["context"].content = news
+            e_context.action = EventAction.BREAK  # 事件结束，并跳过处理context的默认逻辑
             return
         if content == "摸鱼" or content.endswith("摸鱼"):
             moyu = self.get_moyu_calendar()

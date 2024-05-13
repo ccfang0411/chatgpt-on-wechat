@@ -4,7 +4,7 @@
             "enabled": true,
             "priority": 950
         },
-        "MyStock": {
+        "mystock": {
             "enabled": true,
             "priority": 91
         },

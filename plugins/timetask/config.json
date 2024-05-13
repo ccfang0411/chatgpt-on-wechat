@@ -13,7 +13,7 @@
   [
     {
       "key_word": "早报",
-      "func_command_prefix":"$tool "
+      "func_command_prefix":""
     },
     {
       "key_word": "大盘指数",
@@ -38,10 +38,6 @@
     {
       "key_word": "GPT",
       "func_command_prefix": "GPT"
-    },
-    {
-      "key_word": "大盘指数",
-      "func_command_prefix":"$tool "
     }
   ]
 }

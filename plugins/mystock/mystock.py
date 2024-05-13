@@ -13,7 +13,7 @@ import plotly.express as px
 
 
 @plugins.register(
-    name="MyStock",
+    name="mystock",
     desire_priority=91,
     hidden=True,
     desc="获取大盘指数项目",
@@ -40,9 +40,9 @@ class MyStock(Plugin):
         ]:
             return
         content = e_context["context"].content.strip()
-        logger.debug("[Apilot] on_handle_context. content: %s" % content)
+        logger.debug("[MyStock] on_handle_context. content: %s" % content)
 
-        if content == "大盘指数" or content.startswith("今天行情") or content.startswith("今天大盘"):
+        if content.startswith("大盘指数") or content.startswith("今天行情"):
             stock_index = self.get_stock_index()
             reply_type =  ReplyType.TEXT
             reply = self.create_reply(reply_type, stock_index)

@@ -56,7 +56,8 @@ class MyStock(Plugin):
             reply_type =  ReplyType.TEXT
             reply = self.create_reply(reply_type, stock_index)
             e_context["reply"] = reply
-            e_context.action = EventAction.BREAK_PASS  # 事件结束，并跳过处理context的默认逻辑
+            e_context["context"].content = stock_index + "\n 基于上述数据，请你模仿专业的股评家口吻的点评下，要求回复需要有emoji表情，在回复中需要有各股票的涨跌幅，字数尽量在100个字以下"
+            e_context.action = EventAction.BREAK  # 事件结束，并跳过处理context的默认逻辑
             return
     def _load_config_template(self):
         logger.debug("No MyStock plugin config.json, use plugins/MyStock/config.json.template")
